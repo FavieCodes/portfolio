@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me — Imo Emmanuel Udoh | Software Engineer</title>
+  <meta name="description"
+    content="Official profile of Imo Emmanuel Udoh — Software Engineer, QA Specialist, Data Practitioner, and Technical Instructor. Experience, Certifications, and Skills." />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./asset/styles.css" />
+</head>
+
+<body>
+
+  <!-- ─── NAV ─── -->
+  <nav>
+    <div class="nav-logo"><a href="index.html">IMO.UDOH</a></div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+     <li><a href="qa-work.html">QA Work</a></li> 
+   <li><a href="data-work.html">Data Work</a></li>
+      <li><a href="devops-work.html">DevOps Work</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="theme-toggle-wrapper">
+      <span class="theme-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </span>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode"></button>
+      <span class="theme-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+      </span>
+    </div>
+  </nav>
+
+  <!-- ─── HERO HEADER ─── -->
+  <div class="page-hero fancy-hero-bg">
+    <div class="section-label">// background &amp; qualifications</div>
+    <h1 class="fancy-title-gradient">About Imo Emmanuel Udoh</h1>
+    <p class="page-desc">
+      Software Engineer, QA Automation Specialist, Data Practitioner, and Technical Instructor. Bridging software
+      architecture with rigorous quality assurance and statistical science.
+    </p>
+  </div>
+
+  <!-- ─── MAIN  BIO ─── -->
+  <section id="about-detail">
+    <div class="about-grid">
+
+      <div class="about-photo-wrapper fade-in">
+        <img src="./asset/images/my_picture.jpeg" alt="Imo Emmanuel Udoh" class="about-photo" />
+        <div class="about-photo-frame"></div>
+        <div class="about-photo-badge">FULL-STACK • QA • DATA</div>
+      </div>
+
+      <div class="about-content fade-in">
+        <h3>Engineering Philosophy &amp; Journey</h3>
+
+        <p class="about-bio">
+          I hold a Bachelor of Science (B.Sc.) degree in <strong>Computer Science &amp; Statistics</strong> from the
+          <strong>University of Nigeria, Nsukka (UNN)</strong>. This dual background in computational systems and
+          statistical science shapes how I engineer software: I design for edge cases, optimize data structures, test
+          systematically, and measure system performance empirically.
+        </p>
+
+        <p class="about-bio">
+          Over the past 3+ years, I have architected production backends with Node.js, NestJS, and Python, completed all
+          6 stages of the HNG i14 QA Engineering track (exploratory testing, test case design, Postman API testing,
+          Pytest automation, GitHub Actions CI/CD pipelines, and Agile team QA), and designed data-driven platforms
+          parsing natural language queries into SQL.
+        </p>
+
+        <p class="about-bio">
+          As a technical instructor at <strong>Aptech</strong> and <strong>FutureLabs</strong>, I have mentored aspiring
+          developers in full-stack web development and software engineering. Teaching demands absolute clarity,
+          structured communication, and deep problem-solving skills — qualities I bring directly to cross-functional
+          engineering teams.
+        </p>
+
+        <!-- Stat Counters -->
+        <div class="about-stats">
+          <div class="stat-box">
+            <span class="stat-number">16+</span>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">3+</span>
+            <div class="stat-label">Years Dev Exp</div>
+          </div>
+        </div>
+
+        <!--  Chip Badges with SVG icons -->
+        <div class="about-chips">
+          <span class="fancy-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Uyo, Akwa Ibom, Nigeria
+          </span>
+          <span class="fancy-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+              <path d="M6 12v5c3 3 9 3 12 0v-5" />
+            </svg>
+            B.Sc. CS &amp; Statistics (UNN)
+          </span>
+          <span class="fancy-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+            Full-Stack Development
+          </span>
+          <span class="fancy-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+            QA &amp; Test Automation
+          </span>
+          <span class="fancy-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10" />
+              <line x1="12" y1="20" x2="12" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="14" />
+            </svg>
+            Data Analytics &amp; Pipelines
+          </span>
+          <span class="fancy-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2" />
+              <rect x="2" y="14" width="20" height="8" rx="2" />
+              <line x1="6" y1="6" x2="6.01" y2="6" />
+              <line x1="6" y1="18" x2="6.01" y2="18" />
+            </svg>
+            DevOps &amp; Infrastructure
+          </span>
+          <span class="fancy-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            Instructor (Aptech &amp; FutureLabs)
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       WORK EXPERIENCE — terminal design (status labels removed)
+       ═══════════════════════════════════════════════════════════ -->
+  <section id="experience" class="tl-section">
+    <div class="section-label">// career timeline</div>
+    <h2 class="section-title">Work <span>Experience</span></h2>
+
+    <div class="tl-terminal fade-in">
+      <div class="tl-terminal-bar">
+        <div class="tl-dots"><span></span><span></span><span></span></div>
+        <div class="tl-tab">imo@career — experience.log</div>
+      </div>
+      <div class="tl-terminal-body">
+
+        <div class="tl-commit is-active">
+          <div class="tl-commit-head">
+            <span class="tl-branch">Feb 2026 — Present</span>
+          </div>
+          <div class="tl-commit-msg"><strong>Web Development &amp; Programming Instructor</strong></div>
+          <div class="tl-commit-company">Aptech, Uyo</div>
+          <ul class="tl-commit-body">
+            <li>Delivers structured training across multiple accredited modules: Building Modern Websites (HTML5, CSS3, JavaScript, jQuery), Frontend Web Development with React (JSX, hooks, routing, lifecycle, CRUD), Working with MySQL (queries, joins, stored procedures, transactions, replication, performance optimisation), Data Management with SQL Server, Large Data Management with MongoDB, and Rapid App Development with Low-Code/No-Code tools.</li>
+            <li>Designs curricula from beginner to intermediate level — defining learning outcomes, weekly schedules, self-study milestones, and assessment frameworks for each module.</li>
+            <li>Tracks learner progress, grades assignments and projects, provides structured feedback, and identifies at-risk students early to maintain engagement and completion rates.</li>
+            <li>Mentors students on debugging, responsive design, database design, industry best practices, and production-readiness — improving their readiness for junior tech roles.</li>
+            <li>Maintains accurate student records, attendance logs, and progress spreadsheets across multiple cohorts simultaneously using structured digital systems.</li>
+          </ul>
+          <div class="tl-commit-tags">
+            <span class="tl-tag">HTML5/CSS3</span>
+            <span class="tl-tag">React</span>
+            <span class="tl-tag">MySQL</span>
+            <span class="tl-tag">MongoDB</span>
+            <span class="tl-tag">SQL Server</span>
+            <span class="tl-tag">Low-Code</span>
+          </div>
+        </div>
+
+        <div class="tl-commit">
+          <div class="tl-commit-head">
+            <span class="tl-branch">2025</span>
+          </div>
+          <div class="tl-commit-msg"><strong>Backend Engineering Intern</strong></div>
+          <div class="tl-commit-company">HNG i13</div>
+          <ul class="tl-commit-body">
+            <li>Architected a distributed notification system using NestJS and RabbitMQ handling 1,000+ async notifications/min — decoupled into independent microservices containerised with Docker Compose.</li>
+            <li>Built a secure Wallet Service with Paystack integration, atomic transactions, webhook verification, HMAC-hashed API key authentication, and rate limiting.</li>
+            <li>Designed a hybrid authentication system supporting JWT with Google OAuth and custom API keys with granular permissions and expiration logic.</li>
+            <li>Developed an AI orchestration agent using the Mastra framework and Groq (Llama 3.1) integrated with Telex.im via the A2A protocol.</li>
+            <li>Implemented circuit breaker patterns, exponential backoff retries, and Dead Letter Queues — achieving 99.5% delivery reliability.</li>
+          </ul>
+          <div class="tl-commit-tags">
+            <span class="tl-tag">NestJS</span>
+            <span class="tl-tag">RabbitMQ</span>
+            <span class="tl-tag">Docker</span>
+            <span class="tl-tag">Paystack</span>
+            <span class="tl-tag">OAuth</span>
+            <span class="tl-tag">Mastra/Groq</span>
+          </div>
+        </div>
+
+        <div class="tl-commit">
+          <div class="tl-commit-head">
+            <span class="tl-branch">Apr – May 2026</span>
+          </div>
+          <div class="tl-commit-msg"><strong>QA Engineering Track</strong></div>
+          <div class="tl-commit-company">HNG i14 (Stages 0–5)</div>
+          <ul class="tl-commit-body">
+            <li><strong>Stages 0–1:</strong> Identified and reported 10–15 reproducible bugs on live production apps; designed 15+ structured test scenarios and 5 formal test cases covering positive, negative, edge, and boundary cases.</li>
+            <li><strong>Stage 2:</strong> Tested 25+ REST API scenarios on a live platform using Postman — validating status codes, JSON schemas, auth flows, and edge cases.</li>
+            <li><strong>Stages 3–4:</strong> Built a Python/Pytest API automation project with 25+ tests, dynamic token handling, reusable fixtures, and a GitHub Actions CI/CD pipeline running the full suite on every push.</li>
+            <li><strong>Stage 5:</strong> Embedded in a cross-functional Agile team — created a test plan, executed test cases per ticket, filed structured bug reports, and reported pass/fail outcomes in ClickUp.</li>
+          </ul>
+          <div class="tl-commit-tags">
+            <span class="tl-tag">Postman</span>
+            <span class="tl-tag">Pytest</span>
+            <span class="tl-tag">GitHub Actions</span>
+            <span class="tl-tag">Agile QA</span>
+            <span class="tl-tag">ClickUp</span>
+          </div>
+        </div>
+
+        <div class="tl-commit">
+          <div class="tl-commit-head">
+            <span class="tl-branch">Jan 2025 – Dec 2025</span>
+          </div>
+          <div class="tl-commit-msg"><strong>Backend Instructor</strong></div>
+          <div class="tl-commit-company">FutureLabs, Ikot Ekpene</div>
+          <ul class="tl-commit-body">
+            <li>Lead instructor for Node.js, NestJS, and Django — teaching server-side logic, database management, Clean Architecture, SOLID principles, and secure API design.</li>
+            <li>Developed a backend curriculum focused on real-world scalability, performance optimisation, and production deployment workflows.</li>
+            <li>Maintained student records, graded submissions, provided written feedback, and tracked cohort progress through structured programme milestones.</li>
+          </ul>
+          <div class="tl-commit-tags">
+            <span class="tl-tag">Node.js</span>
+            <span class="tl-tag">NestJS</span>
+            <span class="tl-tag">Django</span>
+            <span class="tl-tag">Clean Architecture</span>
+            <span class="tl-tag">SOLID</span>
+          </div>
+        </div>
+
+        <div class="tl-commit">
+          <div class="tl-commit-head">
+            <span class="tl-branch">Mar 2023 – Nov 2023</span>
+          </div>
+          <div class="tl-commit-msg"><strong>Software Engineering Intern (Fullstack)</strong></div>
+          <div class="tl-commit-company">FutureLabs</div>
+          <ul class="tl-commit-body">
+            <li>Built RESTful APIs using Node.js and NestJS integrated with React frontends — handling third-party API integration, complex database relationships, and structured Git workflows.</li>
+            <li>Produced clear technical documentation, API references, and data flow diagrams for team knowledge sharing and onboarding.</li>
+          </ul>
+          <div class="tl-commit-tags">
+            <span class="tl-tag">Node.js</span>
+            <span class="tl-tag">NestJS</span>
+            <span class="tl-tag">React</span>
+            <span class="tl-tag">REST APIs</span>
+            <span class="tl-tag">Git</span>
+          </div>
+        </div>
+
+        <div class="tl-prompt tl-prompt-end">imo@career:~$ <span class="tl-cursor">▌</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       EDUCATION & CERTIFICATIONS — cert manifest terminal
+       ═══════════════════════════════════════════════════════════ -->
+  <section id="certifications" class="pkg-section">
+    <div class="section-label">// credentials &amp; education</div>
+    <h2 class="section-title">Education &amp; <span>Certifications</span></h2>
+
+    <div class="pkg-terminal fade-in">
+      <div class="tl-terminal-bar">
+        <div class="tl-dots"><span></span><span></span><span></span></div>
+        <div class="tl-tab">imo@career — cert list --verify</div>
+      </div>
+      <div class="tl-terminal-body">
+        <div class="tl-prompt">imo@career:~$ <span class="tl-cmd">cert list --verify</span></div>
+
+        <div class="pkg-grid">
+
+          <!-- Education entry (full-width) -->
+          <div class="pkg-card pkg-card--education">
+            <div class="pkg-card-top">
+              <span class="pkg-name">bsc-computer-science-statistics</span>
+              <span class="pkg-badge">🎓 degree</span>
+            </div>
+            <div class="pkg-version">University of Nigeria, Nsukka (UNN) — 2018 – 2022</div>
+            <p class="pkg-desc">Bachelor of Science in Computer Science &amp; Statistics. Core study: Data Structures &amp; Algorithms, Software Engineering, Operating Systems, Database Systems, Probability Theory, Regression Analysis, Statistical Modelling, and Numerical Methods.</p>
+          </div>
+
+          <div class="pkg-card">
+            <div class="pkg-card-top">
+              <span class="pkg-name">python-for-data-science</span>
+              <span class="pkg-badge">✓ verified</span>
+            </div>
+            <div class="pkg-version">IBM / Coursera</div>
+            <p class="pkg-desc">Proficiency in Python for data analysis, visualization, machine learning fundamentals, and scientific computing with NumPy and Pandas.</p>
+            <a href="#" class="pkg-link" target="_blank" rel="noopener noreferrer">↗ View Certificate</a>
+          </div>
+
+          <div class="pkg-card">
+            <div class="pkg-card-top">
+              <span class="pkg-name">proficiency-backend-dev</span>
+              <span class="pkg-badge">✓ verified</span>
+            </div>
+            <div class="pkg-version">HNG Internship</div>
+            <p class="pkg-desc">Certified proficiency in Backend Development through completion of the HNG Internship track — APIs, databases, authentication, and deployment.</p>
+            <a href="#" class="pkg-link" target="_blank" rel="noopener noreferrer">↗ View Certificate</a>
+          </div>
+
+          <div class="pkg-card">
+            <div class="pkg-card-top">
+              <span class="pkg-name">proficiency-software-engineering</span>
+              <span class="pkg-badge">✓ verified</span>
+            </div>
+            <div class="pkg-version">ALX</div>
+            <p class="pkg-desc">Rigorous software engineering programme covering systems programming, algorithms, data structures, and professional software development practices.</p>
+            <a href="#" class="pkg-link" target="_blank" rel="noopener noreferrer">↗ View Certificate</a>
+          </div>
+
+          <div class="pkg-card">
+            <div class="pkg-card-top">
+              <span class="pkg-name">proficiency-web-development</span>
+              <span class="pkg-badge">✓ verified</span>
+            </div>
+            <div class="pkg-version">FutureLabs</div>
+            <p class="pkg-desc">Certified proficiency in Full-Stack Web Development covering HTML5, CSS3, JavaScript, Node.js, REST APIs, and database-driven application architecture.</p>
+            <a href="#" class="pkg-link" target="_blank" rel="noopener noreferrer">↗ View Certificate</a>
+          </div>
+
+          <div class="pkg-card">
+            <div class="pkg-card-top">
+              <span class="pkg-name">women-techsters-bootcamp</span>
+              <span class="pkg-badge">✓ verified</span>
+            </div>
+            <div class="pkg-version">Women Techsters Initiative</div>
+            <p class="pkg-desc">Intensive Software Engineering Bootcamp focused on equipping women in tech with hands-on engineering skills and career-ready technical expertise.</p>
+            <a href="#" class="pkg-link" target="_blank" rel="noopener noreferrer">↗ View Certificate</a>
+          </div>
+
+          <div class="pkg-card">
+            <div class="pkg-card-top">
+              <span class="pkg-name">african-girls-in-tech</span>
+              <span class="pkg-badge">✓ verified</span>
+            </div>
+            <div class="pkg-version">Africa Agility</div>
+            <p class="pkg-desc">African Girls in Tech Bootcamp — empowering women across Africa with practical technology skills, software development, and digital literacy training.</p>
+            <a href="#" class="pkg-link" target="_blank" rel="noopener noreferrer">↗ View Certificate</a>
+          </div>
+
+          <div class="pkg-card">
+            <div class="pkg-card-top">
+              <span class="pkg-name">ai-ml-precision-medicine</span>
+              <span class="pkg-badge">✓ verified</span>
+            </div>
+            <div class="pkg-version">Stanford Deep Data Research Center</div>
+            <p class="pkg-desc">Fundamentals of AI/ML in Precision Medicine — covering machine learning models applied to clinical data, biomarker analysis, and personalized healthcare.</p>
+            <a href="#" class="pkg-link" target="_blank" rel="noopener noreferrer">↗ View Certificate</a>
+          </div>
+
+          <div class="pkg-card">
+            <div class="pkg-card-top">
+              <span class="pkg-name">data-science-cloud-medicine</span>
+              <span class="pkg-badge">✓ verified</span>
+            </div>
+            <div class="pkg-version">Stanford Deep Data Research Center</div>
+            <p class="pkg-desc">Fundamentals of Data Science in Precision Medicine and Cloud Computing — bridging clinical data pipelines, scalable cloud infrastructure, and medical research analytics.</p>
+            <a href="#" class="pkg-link" target="_blank" rel="noopener noreferrer">↗ View Certificate</a>
+          </div>
+
+        </div>
+
+        <div class="tl-prompt tl-prompt-end">imo@career:~$ <span class="tl-cursor">▌</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ─── SKILLS & TOOLBOX SECTION ─── -->
+  <section id="skills">
+    <div class="section-label">// technical stack</div>
+    <h2 class="section-title">Comprehensive <span>Skills</span></h2>
+
+    <div class="skills-wrapper">
+
+      <div class="skill-group fade-in">
+        <h3>Full-Stack &amp; Backend</h3>
+        <ul class="skill-list">
+          <li>Node.js / Express / NestJS</li>
+          <li>Python / Django / FastAPI</li>
+          <li>TypeScript / JavaScript (ES6+)</li>
+          <li>REST APIs / GraphQL / WebSockets</li>
+          <li>PostgreSQL / MongoDB / Redis</li>
+          <li>Microservices / RabbitMQ</li>
+          <li>JWT / OAuth2 + PKCE / RBAC</li>
+        </ul>
+      </div>
+
+      <div class="skill-group fade-in">
+        <h3>QA &amp; Automation</h3>
+        <ul class="skill-list">
+          <li>Manual &amp; Exploratory Bug Hunting</li>
+          <li>Test Case &amp; Scenario Authoring</li>
+          <li>Postman / Newman API Automation</li>
+          <li>Pytest Automation Framework</li>
+          <li>GitHub Actions CI/CD Testing</li>
+          <li>Defect Reporting &amp; Severity Triage</li>
+          <li>Agile QA &amp; ClickUp / Jira Workflow</li>
+        </ul>
+      </div>
+
+      <div class="skill-group fade-in">
+        <h3>Data Science &amp; Analytics</h3>
+        <ul class="skill-list">
+          <li>Statistical Analysis &amp; Modeling</li>
+          <li>Regression &amp; Hypothesis Testing</li>
+          <li>SQL Query Indexing &amp; Optimization</li>
+          <li>Streaming CSV Processing (500k+ rows)</li>
+          <li>Python Pandas &amp; NumPy Stack</li>
+          <li>Rule-based NL to SQL Query Parsers</li>
+          <li>Demographic Intelligence APIs</li>
+        </ul>
+      </div>
+
+      <div class="skill-group fade-in">
+        <h3>DevOps &amp; Tools</h3>
+        <ul class="skill-list">
+          <li>Docker / Docker Compose</li>
+          <li>Linux Administration (Ubuntu/Debian)</li>
+          <li>Nginx / Certbot SSL / UFW Firewall</li>
+          <li>GitHub Actions CI/CD Pipelines</li>
+          <li>React.js / HTML5 / CSS3</li>
+          <li>Git / GitHub Version Control</li>
+          <li>PWA Manifests &amp; Appetize Mobile</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ─── CONTACT ─── -->
+  <section id="contact">
+    <div class="section-label">// let's connect</div>
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+    <p class="contact-desc">
+      Looking for a versatile software engineer with proven experience in development, QA automation, data analytics,
+      and instruction? Let's talk!
+    </p>
+    <div class="contact-links">
+      <a href="mailto:imo.e.udoh@gmail.com" class="contact-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <polyline points="22,6 12,13 2,6" />
+        </svg>
+        imo.e.udoh@gmail.com
+      </a>
+      <a href="https://github.com/PearlPerfect" class="contact-link" target="_blank" rel="noopener noreferrer">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+        </svg>
+        PearlPerfect
+      </a>
+      <a href="https://github.com/FavieCodes" class="contact-link" target="_blank" rel="noopener noreferrer">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+        </svg>
+        FavieCodes
+      </a>
+      <a href="https://linkedin.com/in/imo-udoh-747347197" class="contact-link" target="_blank"
+        rel="noopener noreferrer">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+          <rect x="2" y="9" width="4" height="12" />
+          <circle cx="4" cy="4" r="2" />
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built by Imo Emmanuel Udoh &nbsp;·&nbsp; Software Engineer &amp; Technical Specialist &nbsp;·&nbsp; 2026</p>
+  </footer>
+
+  <!-- ─── SCRIPTS ─── -->
+  <script src="./asset/scripts.js"></script>
+</body>
+</html>

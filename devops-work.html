@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DevOps Work — Imo Emmanuel Udoh | DevOps & Infrastructure</title>
+<meta name="description" content="DevOps & Cloud Infrastructure showcase by Imo Emmanuel Udoh. Linux server hardening, Nginx configuration, Let's Encrypt SSL, Docker Compose, and GitHub Actions CI/CD pipelines."/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="./asset/styles.css"/>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <div class="nav-logo"><a href="index.html">IMO.UDOH</a></div>
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">☰</button>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="qa-work.html">QA Work</a></li>
+    <li><a href="data-work.html">Data Work</a></li>
+    <li><a href="devops-work.html">DevOps Work</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="theme-toggle-wrapper">
+    <span class="theme-icon">🌙</span>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode"></button>
+    <span class="theme-icon">☀️</span>
+  </div>
+</nav>
+
+<!-- ─── PAGE HERO ─── -->
+<div class="page-hero">
+  <div class="section-label">// infrastructure &amp; automation</div>
+  <h1>DevOps <span>&amp; Cloud Infrastructure</span></h1>
+  <p class="page-desc">
+    Automating build pipelines, provisioning secure Linux servers, configuring Nginx reverse proxies, and orchestrating microservices with Docker.
+  </p>
+</div>
+
+<!-- ─── DEVOPS HIGHLIGHTS & COMING SOON MODULE ─── -->
+<div class="coming-soon-wrapper fade-in">
+  <div class="coming-soon-card">
+    <div class="pulse-badge">
+      <div class="pulse-dot"></div>
+      <span>COMING SOON / EXPANDING INFRASTRUCTURE SHOWCASE</span>
+    </div>
+    <h2>DevOps &amp; Infrastructure Roadmap</h2>
+    <p>
+      I am actively expanding this dedicated section to host detailed architecture diagrams, live terminal demos, and Infrastructure-as-Code (IaC) repositories.
+    </p>
+
+    <div class="roadmap-grid">
+      <div class="roadmap-item">
+        <h4><span>🔒</span> Linux Server Hardening</h4>
+        <p>Production server provisioning, key-based SSH authentication, non-root sudo access, and strict UFW firewall rule enforcement (ports 22/80/443).</p>
+      </div>
+
+      <div class="roadmap-item">
+        <h4><span>🌐</span> Nginx &amp; SSL/TLS</h4>
+        <p>Nginx web server configuration, reverse proxy setup for API services, Let's Encrypt SSL certificate automation via Certbot, and HTTP → HTTPS 301 redirects.</p>
+      </div>
+
+      <div class="roadmap-item">
+        <h4><span>⚙️</span> GitHub Actions CI/CD</h4>
+        <p>Automated test workflows triggering on push/PR, pipeline gating on test failure, environment secret injection, and automated deployment scripts.</p>
+      </div>
+
+      <div class="roadmap-item">
+        <h4><span>🐳</span> Docker &amp; Containers</h4>
+        <p>Multi-container orchestration with Docker Compose, NestJS microservices isolation, RabbitMQ message queues, and production build optimizations.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ─── CURRENT DEVOPS PROJECTS PREVIEW ─── -->
+<section>
+  <div class="section-label">// hands-on implementations</div>
+  <h2 class="section-title">Current <span>DevOps Projects</span></h2>
+  <div class="projects-grid">
+
+    <div class="project-card fade-in">
+      <div class="project-icon">🖥️</div>
+      <h3>Hardened Linux Server + Nginx + SSL</h3>
+      <p>Provisioned a production Linux server from scratch: non-root sudo user, key-only SSH, UFW firewall (ports 22/80/443 only), Nginx serving static HTML and a JSON API endpoint, Let's Encrypt SSL via Certbot, and HTTP → HTTPS 301 redirects.</p>
+      <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Linux</span><span class="tag">Nginx</span><span class="tag">SSL/TLS</span><span class="tag">UFW Firewall</span><span class="tag">DevOps</span></div>
+      <div class="project-links">
+        <a href="https://github.com/FavieCodes" class="project-link" target="_blank">⌥ github.com/FavieCodes →</a>
+      </div>
+    </div>
+
+    <div class="project-card fade-in">
+      <div class="project-icon">🔔</div>
+      <h3>Microservices Containerization</h3>
+      <p>Distributed notification system containerized using Docker Compose. Separates worker nodes, RabbitMQ broker instance, and NestJS API services with container network isolation.</p>
+      <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Docker Compose</span><span class="tag">RabbitMQ</span><span class="tag">NestJS</span><span class="tag">Containers</span></div>
+      <div class="project-links">
+        <a href="https://github.com/FavieCodes" class="project-link" target="_blank">⌥ github.com/FavieCodes →</a>
+      </div>
+    </div>
+
+    <div class="project-card fade-in">
+      <div class="project-icon">⚙️</div>
+      <h3>CI/CD Automated Test Pipeline</h3>
+      <p>Configured GitHub Actions workflow pipelines to automatically spin up testing environments, execute Pytest API automation suites, and enforce build gates before merging pull requests.</p>
+      <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">GitHub Actions</span><span class="tag">YAML</span><span class="tag">CI/CD</span><span class="tag">Pytest</span></div>
+      <div class="project-links">
+        <a href="https://github.com/PearlPerfect" class="project-link" target="_blank">⌥ github.com/PearlPerfect →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="section-label">// let's connect</div>
+  <h2 class="section-title">Get In <span>Touch</span></h2>
+  <p style="color:var(--muted);font-size:0.95rem;max-width:550px;margin:0 auto;">
+    Want to discuss cloud infrastructure, CI/CD pipelines, or server security? Let's connect!
+  </p>
+  <div class="contact-links">
+    <a href="mailto:imo.e.udoh@gmail.com" class="contact-link">✉ imo.e.udoh@gmail.com</a>
+    <a href="https://github.com/PearlPerfect" class="contact-link" target="_blank" rel="noopener noreferrer">⌥ PearlPerfect</a>
+    <a href="https://github.com/FavieCodes" class="contact-link" target="_blank" rel="noopener noreferrer">⌥ FavieCodes</a>
+    <a href="https://linkedin.com/in/imo-udoh-747347197" class="contact-link" target="_blank" rel="noopener noreferrer">in LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  <p>Built by Imo Emmanuel Udoh &nbsp;·&nbsp; Software Engineer &amp; Technical Specialist &nbsp;·&nbsp; 2026</p>
+</footer>
+
+<!-- ─── SCRIPTS ─── -->
+<script src="./asset/scripts.js"></script>
+</body>
+</html>
