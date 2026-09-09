@@ -9,6 +9,14 @@
 <link rel="stylesheet" href="./asset/styles.css"/>
 </head>
 <body>
+<!-- GLOBAL LOADER -->
+<div id="globalLoader">
+  <div class="logo-spinner-wrap">
+    <div class="logo-ring"></div>
+    <span class="logo-spinner-name">IMO.UDOH</span>
+  </div>
+</div>
+
 
 <!-- ─── NAV ─── -->
 <nav>
@@ -20,12 +28,10 @@
     <li><a href="qa-work.html">QA Work</a></li>
     <li><a href="data-work.html">Data Work</a></li>
     <li><a href="devops-work.html">DevOps Work</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" id="navContactLink">Contact</a></li>
   </ul>
   <div class="theme-toggle-wrapper">
-    <span class="theme-icon">🌙</span>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode"></button>
-    <span class="theme-icon">☀️</span>
   </div>
 </nav>
 
@@ -170,7 +176,6 @@
 
     <!-- Project 1 -->
     <div class="project-card fade-in">
-      <div class="project-icon">📅</div>
       <h3>Habit Tracker PWA</h3>
       <p>Progressive Web App built strictly from a Technical Requirements Document — required routes, file structure, naming contracts, local persistence, UI test IDs, and PWA manifest. Shipped with unit, integration, and end-to-end tests.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">PWA</span><span class="tag">Testing</span><span class="tag">Local Storage</span><span class="tag">Spec-driven</span></div>
@@ -182,7 +187,6 @@
 
     <!-- Project 2 -->
     <div class="project-card fade-in">
-      <div class="project-icon">🔒</div>
       <h3>End-to-End Encrypted Messaging App</h3>
       <p>Secure messaging app where the server never sees plaintext. Client-side key generation (Web Crypto API), AES-GCM symmetric encryption, RSA-OAEP key exchange, private keys stored in IndexedDB, JWT auth, and encrypted blob backend.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Web Crypto API</span><span class="tag">AES-GCM</span><span class="tag">E2EE</span><span class="tag">IndexedDB</span></div>
@@ -194,7 +198,6 @@
 
     <!-- Project 3 -->
     <div class="project-card fade-in">
-      <div class="project-icon">🧰</div>
       <h3>Smart Utility Toolkit — Mobile App</h3>
       <p>Cross-platform mobile app bundling essential everyday tools: unit converter (length, temperature, weight, currency), notes, and utilities. Published to Appetize for live interactive preview.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Mobile</span><span class="tag">Unit Converter</span><span class="tag">Appetize</span></div>
@@ -206,7 +209,6 @@
 
     <!-- Project 4 -->
     <div class="project-card fade-in">
-      <div class="project-icon">🧬</div>
       <h3>Profile Intelligence API</h3>
       <p>REST API that fans out to Genderize, Agify, and Nationalize APIs simultaneously, applies classification logic, stores results with UUID v7 IDs, and exposes filterable listing and full CRUD.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">3rd-Party APIs</span><span class="tag">UUID v7</span></div>
@@ -218,7 +220,6 @@
 
     <!-- Project 5 -->
     <div class="project-card fade-in">
-      <div class="project-icon">🔐</div>
       <h3>Insighta Labs+ — Multi-Interface Platform</h3>
       <p>Extended backend platform featuring GitHub OAuth with PKCE, access + refresh tokens, role-based access control (RBAC), a CLI storing credentials locally, web portal with HTTP-only cookies, and CSRF protection.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">OAuth/PKCE</span><span class="tag">RBAC</span><span class="tag">CLI Tool</span><span class="tag">Node.js</span></div>
@@ -230,7 +231,6 @@
 
     <!-- Project 6 -->
     <div class="project-card fade-in">
-      <div class="project-icon">🔔</div>
       <h3>Distributed Notification System</h3>
       <p>Microservices notification platform using NestJS + RabbitMQ. Handles async notifications via email and push (FCM) with queue processing. Containerized with Docker Compose.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">NestJS</span><span class="tag">RabbitMQ</span><span class="tag">Docker</span><span class="tag">Microservices</span></div>
@@ -241,7 +241,6 @@
 
     <!-- Project 7 -->
     <div class="project-card fade-in">
-      <div class="project-icon">💳</div>
       <h3>Secure Wallet Service API</h3>
       <p>Fintech backend featuring Paystack payment gateway integration, atomic database transactions to prevent double-spending, HMAC API key auth, and webhook signature verification.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">Paystack</span><span class="tag">Fintech</span></div>
@@ -253,7 +252,6 @@
 
     <!-- Project 8 -->
     <div class="project-card fade-in">
-      <div class="project-icon">🤖</div>
       <h3>AI Holiday Reminder Agent</h3>
       <p>Mastra framework + Groq (Llama 3.1) AI agent integrated with Telex.im via A2A protocol. Features smart conversational triggers and automated holiday reminders.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Mastra</span><span class="tag">Groq AI</span><span class="tag">Node.js</span><span class="tag">A2A</span></div>
@@ -265,7 +263,6 @@
 
     <!-- Project 9 -->
     <div class="project-card fade-in">
-      <div class="project-icon">🖥️</div>
       <h3>Hardened Linux Server + Nginx + SSL</h3>
       <p>Provisioned a production Linux server from scratch: non-root sudo user, key-only SSH, UFW firewall (ports 22/80/443), Nginx static/API configuration, Let's Encrypt SSL via Certbot, and HTTPS redirects.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Linux</span><span class="tag">Nginx</span><span class="tag">SSL/TLS</span><span class="tag">DevOps</span></div>
@@ -354,7 +351,7 @@
     Available for Software Engineering, Full-Stack, QA Automation, Data, and DevOps opportunities. I bring engineering excellence, analytical precision, and developer empathy to every team.
   </p>
   <div class="contact-links">
-    <a href="mailto:imo.e.udoh@gmail.com" class="contact-link">✉ imo.e.udoh@gmail.com</a>
+    <a href="mailto:imo.e.udoh@gmail.com" class="contact-link">imo.e.udoh@gmail.com</a>
     <a href="https://github.com/PearlPerfect" class="contact-link" target="_blank" rel="noopener noreferrer">⌥ PearlPerfect</a>
     <a href="https://github.com/FavieCodes" class="contact-link" target="_blank" rel="noopener noreferrer">⌥ FavieCodes</a>
     <a href="https://linkedin.com/in/imo-udoh-747347197" class="contact-link" target="_blank" rel="noopener noreferrer">in LinkedIn</a>
@@ -364,6 +361,40 @@
 <footer>
   <p>Built by Imo Emmanuel Udoh &nbsp;·&nbsp; Software Engineer &amp; Technical Specialist &nbsp;·&nbsp; 2026</p>
 </footer>
+
+<!-- ─── CONTACT MODAL ─── -->
+<div class="contact-modal-overlay" id="contactModalOverlay" role="dialog" aria-modal="true" aria-label="Contact Form">
+  <div class="contact-modal">
+    <button class="modal-close-btn" id="closeContactModal" aria-label="Close contact form">✕</button>
+    <div class="section-label" style="margin-bottom:0.5rem">// get in touch</div>
+    <h2 class="modal-title">Send a <span>Message</span></h2>
+    <p class="modal-subtitle">Fill in the form and I'll get back to you via email.</p>
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contactName">Your Name</label>
+          <input type="text" id="contactName" name="Name" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Your Email</label>
+          <input type="email" id="contactEmail" name="Email" placeholder="john@example.com" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="contactSubject">Subject</label>
+        <input type="text" id="contactSubject" name="Subject" placeholder="Project Inquiry / Job Opportunity" required />
+      </div>
+      <div class="form-group">
+        <label for="contactMessage">Message</label>
+        <textarea id="contactMessage" name="Message" rows="5" placeholder="Hi Imo, I'd like to discuss..." required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">
+        <span>Send Message</span>
+        <span class="btn-arrow">→</span>
+      </button>
+    </form>
+  </div>
+</div>
 
 <!-- ─── SCRIPTS ─── -->
 <script src="./asset/scripts.js"></script>

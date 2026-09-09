@@ -14,6 +14,14 @@
 </head>
 
 <body>
+<!-- GLOBAL LOADER -->
+<div id="globalLoader">
+  <div class="logo-spinner-wrap">
+    <div class="logo-ring"></div>
+    <span class="logo-spinner-name">IMO.UDOH</span>
+  </div>
+</div>
+
 
   <!-- ─── NAV ─── -->
   <nav>
@@ -25,17 +33,15 @@
      <li><a href="qa-work.html">QA Work</a></li> 
    <li><a href="data-work.html">Data Work</a></li>
       <li><a href="devops-work.html">DevOps Work</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="#contact" id="navContactLink">Contact</a></li>
     </ul>
     <div class="theme-toggle-wrapper">
-      <span class="theme-icon">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
         </svg>
       </span>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode"></button>
-      <span class="theme-icon">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="5" />
@@ -327,7 +333,7 @@
           <div class="pkg-card pkg-card--education">
             <div class="pkg-card-top">
               <span class="pkg-name">bsc-computer-science-statistics</span>
-              <span class="pkg-badge">🎓 degree</span>
+              <span class="pkg-badge">degree</span>
             </div>
             <div class="pkg-version">University of Nigeria, Nsukka (UNN) — 2018 – 2022</div>
             <p class="pkg-desc">Bachelor of Science in Computer Science &amp; Statistics. Core study: Data Structures &amp; Algorithms, Software Engineering, Operating Systems, Database Systems, Probability Theory, Regression Analysis, Statistical Modelling, and Numerical Methods.</p>
@@ -537,6 +543,40 @@
   </footer>
 
   <!-- ─── SCRIPTS ─── -->
-  <script src="./asset/scripts.js"></script>
+  <!-- ─── CONTACT MODAL ─── -->
+<div class="contact-modal-overlay" id="contactModalOverlay" role="dialog" aria-modal="true" aria-label="Contact Form">
+  <div class="contact-modal">
+    <button class="modal-close-btn" id="closeContactModal" aria-label="Close contact form">✕</button>
+    <div class="section-label" style="margin-bottom:0.5rem">// get in touch</div>
+    <h2 class="modal-title">Send a <span>Message</span></h2>
+    <p class="modal-subtitle">Fill in the form and I'll get back to you via email.</p>
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contactName">Your Name</label>
+          <input type="text" id="contactName" name="Name" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Your Email</label>
+          <input type="email" id="contactEmail" name="Email" placeholder="john@example.com" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="contactSubject">Subject</label>
+        <input type="text" id="contactSubject" name="Subject" placeholder="Project Inquiry / Job Opportunity" required />
+      </div>
+      <div class="form-group">
+        <label for="contactMessage">Message</label>
+        <textarea id="contactMessage" name="Message" rows="5" placeholder="Hi Imo, I'd like to discuss..." required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">
+        <span>Send Message</span>
+        <span class="btn-arrow">→</span>
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="./asset/scripts.js"></script>
 </body>
 </html>

@@ -9,6 +9,14 @@
 <link rel="stylesheet" href="./asset/styles.css"/>
 </head>
 <body>
+<!-- GLOBAL LOADER -->
+<div id="globalLoader">
+  <div class="logo-spinner-wrap">
+    <div class="logo-ring"></div>
+    <span class="logo-spinner-name">IMO.UDOH</span>
+  </div>
+</div>
+
 
 <!-- ─── NAV ─── -->
 <nav>
@@ -20,12 +28,10 @@
     <li><a href="qa-work.html">QA Work</a></li>
     <li><a href="data-work.html">Data Work</a></li>
     <li><a href="devops-work.html">DevOps Work</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="#contact" id="navContactLink">Contact</a></li>
   </ul>
   <div class="theme-toggle-wrapper">
-    <span class="theme-icon">🌙</span>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode"></button>
-    <span class="theme-icon">☀️</span>
   </div>
 </nav>
 
@@ -52,12 +58,12 @@
 
     <div class="roadmap-grid">
       <div class="roadmap-item">
-        <h4><span>🔒</span> Linux Server Hardening</h4>
+        <h4>Linux Server Hardening</h4>
         <p>Production server provisioning, key-based SSH authentication, non-root sudo access, and strict UFW firewall rule enforcement (ports 22/80/443).</p>
       </div>
 
       <div class="roadmap-item">
-        <h4><span>🌐</span> Nginx &amp; SSL/TLS</h4>
+        <h4>Nginx &amp; SSL/TLS</h4>
         <p>Nginx web server configuration, reverse proxy setup for API services, Let's Encrypt SSL certificate automation via Certbot, and HTTP → HTTPS 301 redirects.</p>
       </div>
 
@@ -67,7 +73,7 @@
       </div>
 
       <div class="roadmap-item">
-        <h4><span>🐳</span> Docker &amp; Containers</h4>
+        <h4>Docker &amp; Containers</h4>
         <p>Multi-container orchestration with Docker Compose, NestJS microservices isolation, RabbitMQ message queues, and production build optimizations.</p>
       </div>
     </div>
@@ -83,7 +89,6 @@
   <div class="projects-grid">
 
     <div class="project-card fade-in">
-      <div class="project-icon">🖥️</div>
       <h3>Hardened Linux Server + Nginx + SSL</h3>
       <p>Provisioned a production Linux server from scratch: non-root sudo user, key-only SSH, UFW firewall (ports 22/80/443 only), Nginx serving static HTML and a JSON API endpoint, Let's Encrypt SSL via Certbot, and HTTP → HTTPS 301 redirects.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Linux</span><span class="tag">Nginx</span><span class="tag">SSL/TLS</span><span class="tag">UFW Firewall</span><span class="tag">DevOps</span></div>
@@ -93,7 +98,6 @@
     </div>
 
     <div class="project-card fade-in">
-      <div class="project-icon">🔔</div>
       <h3>Microservices Containerization</h3>
       <p>Distributed notification system containerized using Docker Compose. Separates worker nodes, RabbitMQ broker instance, and NestJS API services with container network isolation.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Docker Compose</span><span class="tag">RabbitMQ</span><span class="tag">NestJS</span><span class="tag">Containers</span></div>
@@ -103,7 +107,6 @@
     </div>
 
     <div class="project-card fade-in">
-      <div class="project-icon">⚙️</div>
       <h3>CI/CD Automated Test Pipeline</h3>
       <p>Configured GitHub Actions workflow pipelines to automatically spin up testing environments, execute Pytest API automation suites, and enforce build gates before merging pull requests.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">GitHub Actions</span><span class="tag">YAML</span><span class="tag">CI/CD</span><span class="tag">Pytest</span></div>
@@ -125,7 +128,7 @@
     Want to discuss cloud infrastructure, CI/CD pipelines, or server security? Let's connect!
   </p>
   <div class="contact-links">
-    <a href="mailto:imo.e.udoh@gmail.com" class="contact-link">✉ imo.e.udoh@gmail.com</a>
+    <a href="mailto:imo.e.udoh@gmail.com" class="contact-link">imo.e.udoh@gmail.com</a>
     <a href="https://github.com/PearlPerfect" class="contact-link" target="_blank" rel="noopener noreferrer">⌥ PearlPerfect</a>
     <a href="https://github.com/FavieCodes" class="contact-link" target="_blank" rel="noopener noreferrer">⌥ FavieCodes</a>
     <a href="https://linkedin.com/in/imo-udoh-747347197" class="contact-link" target="_blank" rel="noopener noreferrer">in LinkedIn</a>
@@ -137,6 +140,41 @@
 </footer>
 
 <!-- ─── SCRIPTS ─── -->
+
+<!-- ─── CONTACT MODAL ─── -->
+<div class="contact-modal-overlay" id="contactModalOverlay" role="dialog" aria-modal="true" aria-label="Contact Form">
+  <div class="contact-modal">
+    <button class="modal-close-btn" id="closeContactModal" aria-label="Close contact form">✕</button>
+    <div class="section-label" style="margin-bottom:0.5rem">// get in touch</div>
+    <h2 class="modal-title">Send a <span>Message</span></h2>
+    <p class="modal-subtitle">Fill in the form and I'll get back to you via email.</p>
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contactName">Your Name</label>
+          <input type="text" id="contactName" name="Name" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Your Email</label>
+          <input type="email" id="contactEmail" name="Email" placeholder="john@example.com" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="contactSubject">Subject</label>
+        <input type="text" id="contactSubject" name="Subject" placeholder="Project Inquiry / Job Opportunity" required />
+      </div>
+      <div class="form-group">
+        <label for="contactMessage">Message</label>
+        <textarea id="contactMessage" name="Message" rows="5" placeholder="Hi Imo, I'd like to discuss..." required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">
+        <span>Send Message</span>
+        <span class="btn-arrow">→</span>
+      </button>
+    </form>
+  </div>
+</div>
+
 <script src="./asset/scripts.js"></script>
 </body>
 </html>

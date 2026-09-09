@@ -9,6 +9,14 @@
 <link rel="stylesheet" href="./asset/styles.css"/>
 </head>
 <body>
+<!-- GLOBAL LOADER -->
+<div id="globalLoader">
+  <div class="logo-spinner-wrap">
+    <div class="logo-ring"></div>
+    <span class="logo-spinner-name">IMO.UDOH</span>
+  </div>
+</div>
+
 
 <!-- ─── NAV ─── -->
 <nav>
@@ -20,12 +28,10 @@
     <li><a href="qa-work.html">QA Work</a></li>
     <li><a href="data-work.html">Data Work</a></li>
     <li><a href="devops-work.html">DevOps Work</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="#contact" id="navContactLink">Contact</a></li>
   </ul>
   <div class="theme-toggle-wrapper">
-    <span class="theme-icon">🌙</span>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode"></button>
-    <span class="theme-icon">☀️</span>
   </div>
 </nav>
 
@@ -51,11 +57,17 @@
 
 <!-- ─── ALL PROJECTS GRID ─── -->
 <section style="padding-top: 2rem;">
-  <div class="projects-grid">
+  <div class="projects-container-wrapper">
+    <div class="projects-loader" id="projectsLoader">
+      <div class="logo-spinner-wrap">
+        <div class="logo-ring"></div>
+        <span class="logo-spinner-name">IMO.UDOH</span>
+      </div>
+    </div>
+    <div class="projects-grid">
 
     <!-- 1 -->
     <div class="project-card fade-in" data-category="fullstack qa backend">
-      <div class="project-icon">📅</div>
       <h3>Habit Tracker PWA</h3>
       <p>Progressive Web App built strictly from a Technical Requirements Document — required routes, file structure, naming contracts, local persistence, UI test IDs, and PWA manifest. Shipped with unit, integration, and end-to-end tests using exact required test titles verified against the spec.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">PWA</span><span class="tag">Testing</span><span class="tag">Local Storage</span><span class="tag">Spec-driven</span></div>
@@ -67,7 +79,6 @@
 
     <!-- 2 -->
     <div class="project-card fade-in" data-category="fullstack backend devops">
-      <div class="project-icon">🔒</div>
       <h3>End-to-End Encrypted Messaging App</h3>
       <p>Secure messaging app where the server never sees plaintext. Client-side key generation (Web Crypto API), AES-GCM symmetric encryption, RSA-OAEP key exchange, private keys stored only in IndexedDB, JWT auth, and an encrypted blob storage backend.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Web Crypto API</span><span class="tag">AES-GCM</span><span class="tag">E2EE</span><span class="tag">IndexedDB</span><span class="tag">JWT</span></div>
@@ -79,7 +90,6 @@
 
     <!-- 3 -->
     <div class="project-card fade-in" data-category="fullstack qa">
-      <div class="project-icon">✅</div>
       <h3>Testable Todo Card Component</h3>
       <p>Accessible, semantic todo card built to strict QA testability standards — full data-testid coverage, ARIA roles, keyboard navigation, live time-remaining updates, edit/delete mode, status transitions, priority indicators, and responsive layout from 320px up.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">HTML/CSS/JS</span><span class="tag">Accessibility</span><span class="tag">WCAG AA</span><span class="tag">Semantic HTML</span></div>
@@ -91,7 +101,6 @@
 
     <!-- 4 -->
     <div class="project-card fade-in" data-category="fullstack qa">
-      <div class="project-icon">👤</div>
       <h3>Accessible Profile Card</h3>
       <p>Semantic, responsive profile card with live epoch timestamp, avatar, social links, hobbies and dislikes lists — built with full data-testid coverage for automated testing, WCAG AA contrast, and keyboard-focusable interactions.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">HTML/CSS/JS</span><span class="tag">Accessibility</span><span class="tag">Responsive</span><span class="tag">data-testid</span></div>
@@ -103,7 +112,6 @@
 
     <!-- 5 -->
     <div class="project-card fade-in" data-category="mobile-ai fullstack">
-      <div class="project-icon">🧰</div>
       <h3>Smart Utility Toolkit — Mobile App</h3>
       <p>Cross-platform mobile app bundling essential everyday tools: unit converter (length, temperature, weight, currency), notes, and more. Clean UI, seamless navigation, and published to Appetize for live preview.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Mobile</span><span class="tag">Unit Converter</span><span class="tag">Appetize</span></div>
@@ -115,7 +123,6 @@
 
     <!-- 6 -->
     <div class="project-card fade-in" data-category="backend qa">
-      <div class="project-icon">🔍</div>
       <h3>Name Classifier API</h3>
       <p>GET endpoint that calls the Genderize API, extracts gender, probability, and sample size, computes an is_confident flag (probability ≥ 0.7 AND sample_size ≥ 100), and returns a structured response with UTC timestamps — under 500ms response time.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Node.js</span><span class="tag">REST API</span><span class="tag">External API</span><span class="tag">CORS</span></div>
@@ -129,7 +136,6 @@
 
     <!-- 7 -->
     <div class="project-card fade-in" data-category="backend data">
-      <div class="project-icon">🧬</div>
       <h3>Profile Intelligence API</h3>
       <p>REST API that accepts a name, fans out to Genderize, Agify, and Nationalize APIs simultaneously, applies age-group and nationality classification logic, stores results in a database with UUID v7 IDs, and exposes full CRUD with idempotent creation and filterable listing.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">3rd-Party APIs</span><span class="tag">UUID v7</span></div>
@@ -142,7 +148,6 @@
 
     <!-- 8 -->
     <div class="project-card fade-in" data-category="backend data">
-      <div class="project-icon">🔮</div>
       <h3>Insighta Labs</h3>
       <p>REST API that upgrades a demographic database with advanced filtering, sorting, pagination, and rule-based natural language search — parsing plain English queries like "young males from nigeria" into database filters without AI. Seeds 2026 profiles with UUID v7 IDs, strict table schema, and combined query parameters.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">3rd-Party APIs</span><span class="tag">UUID v7</span></div>
@@ -155,7 +160,6 @@
 
     <!-- 9 -->
     <div class="project-card fade-in" data-category="backend fullstack devops">
-      <div class="project-icon">🔐</div>
       <h3>Insighta Labs+ — Secure Multi-Interface Platform</h3>
       <p>Extended the Profile Intelligence API into a full platform: GitHub OAuth with PKCE, access + refresh token management, role-based access control (admin/analyst), a globally installable CLI storing credentials at ~/.insighta/, a web portal with HTTP-only cookies and CSRF protection, rate limiting, and CSV export.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">OAuth/PKCE</span><span class="tag">RBAC</span><span class="tag">CLI Tool</span><span class="tag">Node.js</span><span class="tag">Security</span></div>
@@ -169,7 +173,6 @@
 
     <!-- 10 -->
     <div class="project-card fade-in" data-category="backend devops">
-      <div class="project-icon">🔔</div>
       <h3>Distributed Notification System</h3>
       <p>Microservices notification platform using NestJS + RabbitMQ. Handles 1,000+ async notifications/min via email and push (FCM). Containerized with Docker Compose.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">NestJS</span><span class="tag">RabbitMQ</span><span class="tag">Docker</span><span class="tag">Microservices</span></div>
@@ -180,7 +183,6 @@
 
     <!-- 11 -->
     <div class="project-card fade-in" data-category="backend fullstack">
-      <div class="project-icon">💳</div>
       <h3>Secure Wallet Service API</h3>
       <p>Fintech backend with Paystack integration, atomic transactions to prevent double-spending, HMAC API key auth, webhook verification, and Joi schema validation.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">Paystack</span><span class="tag">Fintech</span></div>
@@ -192,7 +194,6 @@
 
     <!-- 12 -->
     <div class="project-card fade-in" data-category="backend data devops">
-      <div class="project-icon">⚡</div>
       <h3>Insighta Labs+ — Scale &amp; Optimization</h3>
       <p>Scaled a demographic intelligence platform from design to implementation: query indexing and caching, canonical query normalization for cache efficiency, and streaming CSV ingestion (up to 500k rows) with chunked processing, duplicate skipping, and partial-failure resilience — without blocking live read traffic.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">System Design</span><span class="tag">Caching</span><span class="tag">CSV Ingestion</span><span class="tag">Query Optimization</span></div>
@@ -204,7 +205,6 @@
 
     <!-- 13 -->
     <div class="project-card fade-in" data-category="fullstack backend">
-      <div class="project-icon">🎮</div>
       <h3>Rigaby — Gamified Learning</h3>
       <p>Data-driven learning platform with automated rewards engine, real-time leaderboards, tiered subscriptions, and conditional task unlocking based on user activity.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">NestJS</span><span class="tag">PostgreSQL</span><span class="tag">System Design</span><span class="tag">Gamification</span></div>
@@ -215,7 +215,6 @@
 
     <!-- 14 -->
     <div class="project-card fade-in" data-category="mobile-ai backend">
-      <div class="project-icon">🤖</div>
       <h3>AI Holiday Reminder Agent</h3>
       <p>Mastra framework + Groq (Llama 3.1) AI agent integrated with Telex.im via A2A protocol. Smart reminders at 30, 10, 3, and 2 days before holidays with natural language understanding.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Mastra</span><span class="tag">Groq AI</span><span class="tag">Node.js</span><span class="tag">A2A Protocol</span></div>
@@ -227,7 +226,6 @@
 
     <!-- 15 -->
     <div class="project-card fade-in" data-category="devops">
-      <div class="project-icon">🖥️</div>
       <h3>Hardened Linux Server + Nginx + SSL</h3>
       <p>Provisioned a production Linux server from scratch: non-root sudo user, key-only SSH, UFW firewall (ports 22/80/443 only), Nginx serving static HTML and a JSON API endpoint, Let's Encrypt SSL via Certbot, and HTTP → HTTPS 301 redirects.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Linux</span><span class="tag">Nginx</span><span class="tag">SSL/TLS</span><span class="tag">UFW Firewall</span><span class="tag">DevOps</span></div>
@@ -238,7 +236,6 @@
 
     <!-- 16 -->
     <div class="project-card fade-in" data-category="mobile-ai fullstack">
-      <div class="project-icon">🧩</div>
       <h3>AI Page Summarizer — Chrome Extension</h3>
       <p>Manifest V3 Chrome Extension that extracts readable page content, sends it securely to an AI API via a background service worker (no exposed keys), and displays bullet-point summaries, key insights, and estimated reading time. Caches results per URL via chrome.storage.</p>
       <div class="stage-tags" style="margin-bottom:1rem"><span class="tag">Chrome Extension</span><span class="tag">Manifest V3</span><span class="tag">AI API</span><span class="tag">Service Worker</span></div>
@@ -248,6 +245,10 @@
       </div>
     </div>
 
+    </div>
+
+    <!-- Pagination Controls -->
+    <div class="pagination-container" id="paginationContainer"></div>
   </div>
 </section>
 
@@ -261,7 +262,7 @@
     Have a project in mind or looking to hire? I'm open to Software Engineering, QA Automation, Data, and DevOps roles.
   </p>
   <div class="contact-links">
-    <a href="mailto:imo.e.udoh@gmail.com" class="contact-link">✉ imo.e.udoh@gmail.com</a>
+    <a href="mailto:imo.e.udoh@gmail.com" class="contact-link">imo.e.udoh@gmail.com</a>
     <a href="https://github.com/PearlPerfect" class="contact-link" target="_blank" rel="noopener noreferrer">⌥ PearlPerfect</a>
     <a href="https://github.com/FavieCodes" class="contact-link" target="_blank" rel="noopener noreferrer">⌥ FavieCodes</a>
     <a href="https://linkedin.com/in/imo-udoh-747347197" class="contact-link" target="_blank" rel="noopener noreferrer">in LinkedIn</a>
@@ -273,6 +274,41 @@
 </footer>
 
 <!-- ─── SCRIPTS ─── -->
+
+<!-- ─── CONTACT MODAL ─── -->
+<div class="contact-modal-overlay" id="contactModalOverlay" role="dialog" aria-modal="true" aria-label="Contact Form">
+  <div class="contact-modal">
+    <button class="modal-close-btn" id="closeContactModal" aria-label="Close contact form">✕</button>
+    <div class="section-label" style="margin-bottom:0.5rem">// get in touch</div>
+    <h2 class="modal-title">Send a <span>Message</span></h2>
+    <p class="modal-subtitle">Fill in the form and I'll get back to you via email.</p>
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contactName">Your Name</label>
+          <input type="text" id="contactName" name="Name" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Your Email</label>
+          <input type="email" id="contactEmail" name="Email" placeholder="john@example.com" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="contactSubject">Subject</label>
+        <input type="text" id="contactSubject" name="Subject" placeholder="Project Inquiry / Job Opportunity" required />
+      </div>
+      <div class="form-group">
+        <label for="contactMessage">Message</label>
+        <textarea id="contactMessage" name="Message" rows="5" placeholder="Hi Imo, I'd like to discuss..." required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">
+        <span>Send Message</span>
+        <span class="btn-arrow">→</span>
+      </button>
+    </form>
+  </div>
+</div>
+
 <script src="./asset/scripts.js"></script>
 </body>
 </html>
